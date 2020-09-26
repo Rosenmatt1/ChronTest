@@ -7,6 +7,7 @@ var CronJob = require('cron').CronJob;
 // Months: 0-11 (Jan-Dec)
 // Day of Week: 0-6 (Sun-Sat)
 
+
 console.log('Before job instantiation');
 const job = new CronJob('* 10 * * * *', function() {
 	const d = new Date();
@@ -31,4 +32,12 @@ job.start();
 //  }
 
 //  console.log(testChron())
+
+//run of Monday - Friday
+// onst job = new CronJob('00 30 11 * * 1-5', function() {
+// 	const d = new Date();
+// 	console.log('onTick:', d);
+// });
+// console.log('After job instantiation');
+// job.start();
 
